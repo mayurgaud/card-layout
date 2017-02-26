@@ -1,0 +1,81 @@
+body {
+    background: url('../../images/sebastian-muller-52.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
+}
+
+.flex-row > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row .thumbnail,
+.flex-row .caption {
+    flex-direction: column;
+    display: flex;
+    flex: 1 0 auto;
+    height: auto;
+    position: relative;
+    color: #ffffff;
+    border: none;
+    word-wrap: break-word;
+}
+
+.card-collection:nth-child(even){
+    background-color: rgba(3, 202, 204, .5);
+}
+
+.card-collection:nth-child(odd){
+    background-color: rgba(69, 89, 138, .5);
+}
+
+.flex-text {
+    flex-grow: 1;
+}
+
+.flex-row img {
+    min-width: 0;
+    width: 100%;
+}
+
+.overLay {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.card {
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.thumbnail {
+    margin-bottom: 0;
+    background-color: transparent;
+}
+
+.card-collection {
+    margin-bottom: 25px;
+}
+
+.card-collection .thumbnail:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.card-collection .thumbnail:hover .overLay {
+    opacity: 1;
+}
+
