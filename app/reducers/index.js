@@ -8,7 +8,7 @@ export default (state = {
         case 'DELETE_CARD':
             return {
                 ...state,
-                cards: [...state.cards.slice(0, action.cardIndex), ...state.cards.slice(action.cardIndex + 1)]
+                cards: state.cards.filter((item, idx) => idx != action.cardIndex)
             };
         case 'EDIT_CARD':
             return {
