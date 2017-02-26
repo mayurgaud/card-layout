@@ -6,6 +6,9 @@ import {Button, ButtonToolbar, Grid, Row, Col, Thumbnail} from 'react-bootstrap'
 import {connect} from 'react-redux'
 import {addCard, updateCard, deleteCard, editCard} from '../actions'
 
+/**
+ * Displays card layout
+ */
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -16,20 +19,40 @@ class App extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    /**
+     * Add card
+     *
+     * @param card
+     */
     handleSubmit(card) {
         this.props.dispatch(addCard(card));
     }
 
+    /**
+     * Delete Card
+     *
+     * @param e
+     */
     deleteCard(e) {
         let cardIndex = e.target.id.replace('card', '');
         this.props.dispatch(deleteCard(cardIndex));
     }
 
+    /**
+     * Edit card
+     *
+     * @param e
+     */
     editCard(e) {
         let card = e.target.id.replace('card', '');
         this.props.dispatch(editCard(card));
     }
 
+    /**
+     * Update card
+     *
+     * @param e
+     */
     updateCard(e) {
         this.props.dispatch(updateCard(e));
     }
@@ -49,7 +72,7 @@ class App extends React.Component {
                                     <Thumbnail>
                                         <div className="caption">
                                             <h3>{card.title}</h3>
-                                            <p className="flex-text">{card.description}</p>
+                                            <p className="flex-text text-muted">{card.description}</p>
                                         </div>
                                         <div className="overLay">
                                             <ButtonToolbar>

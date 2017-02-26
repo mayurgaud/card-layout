@@ -1,7 +1,10 @@
 import React from 'react';
-import {Button, FormControl, Form, FormGroup} from 'react-bootstrap';
+import {Button, FormControl, Form, FormGroup, Col, Thumbnail} from 'react-bootstrap';
 require('./App.css');
 
+/**
+ * Creates card form
+ */
 class CardForm extends React.Component {
     constructor(props) {
         super(props);
@@ -17,14 +20,27 @@ class CardForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    /**
+     * Change title
+     *
+     * @param e
+     */
     OnTitleChange(e) {
         this.setState({title: e.target.value});
     }
 
+    /**
+     * Change description
+     *
+     * @param e
+     */
     OnDescriptionChange(e) {
         this.setState({description: e.target.value});
     }
 
+    /**
+     * Submit card form
+     */
     handleSubmit() {
         var newCard = {
             title: this.state.title,
@@ -45,8 +61,8 @@ class CardForm extends React.Component {
         const {title, description} = this.state;
 
         return (
-            <div className="col-xs-12 col-sm-6 col-lg-3">
-                <div className="thumbnail">
+            <Col xs={12} sm={6} lg={3}>
+                <Thumbnail>
                     <div className="caption">
                         <Form>
                             <FormGroup controlId="formHorizontalTitle">
@@ -76,13 +92,14 @@ class CardForm extends React.Component {
                             </Button>
                         </Form>
                     </div>
-                </div>
-            </div>
+                </Thumbnail>
+            </Col>
 
         );
     }
 }
 
+// Specifies the props types:
 CardForm.propTypes = {
     title: React.PropTypes.string,
     description: React.PropTypes.string,

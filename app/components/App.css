@@ -24,18 +24,15 @@ body {
     flex: 1 0 auto;
     height: auto;
     position: relative;
-    color: #ffffff;
+    color: #000000;
     border: none;
     word-wrap: break-word;
 }
 
-.card-collection:nth-child(even){
-    background-color: rgba(3, 202, 204, .5);
+.card-collection{
+    background-color: #ffffff;
 }
 
-.card-collection:nth-child(odd){
-    background-color: rgba(69, 89, 138, .5);
-}
 
 .flex-text {
     flex-grow: 1;
@@ -56,7 +53,7 @@ body {
     -ms-transform: translate(-50%, -50%)
 }
 
-.card {
+.card-collection {
     -webkit-box-shadow: 0 8px 6px -6px black;
     -moz-box-shadow: 0 8px 6px -6px black;
     box-shadow: 0 8px 6px -6px black;
@@ -71,11 +68,11 @@ body {
     margin-bottom: 25px;
 }
 
-.card-collection .thumbnail:hover {
-    background-color: rgba(0, 0, 0, .5);
+.card-collection:hover {
+    background-color: rgba(255, 255, 255, .7);
 }
 
-.card-collection .thumbnail:hover .overLay {
+.card-collection:hover .overLay {
     opacity: 1;
 }
 
