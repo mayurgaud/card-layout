@@ -94,7 +94,6 @@ class CardForm extends React.Component {
                     </div>
                 </Thumbnail>
             </Col>
-
         );
     }
 }

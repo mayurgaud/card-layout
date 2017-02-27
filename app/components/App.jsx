@@ -49,7 +49,7 @@ class App extends React.Component {
     }
 
     /**
-     * Update card
+     * Update cards
      *
      * @param e
      */
@@ -67,21 +67,20 @@ class App extends React.Component {
                 <Row className="flex-row">
                     {cards.map((card, index) => (
                         this.props.cardId != card.id ?
-                            <Col key={card.id} xs={12} sm={6} lg={3} className="card-collection">
-                                <div className="card">
-                                    <Thumbnail>
-                                        <div className="caption">
-                                            <h3>{card.title}</h3>
-                                            <p className="flex-text text-muted">{card.description}</p>
-                                        </div>
-                                        <div className="overLay">
-                                            <ButtonToolbar>
-                                                <Button bsStyle="success" id={`card${card.id}`} onClick={this.editCard}>Edit</Button>
-                                                <Button bsStyle="success" id={`card${index}`} onClick={this.deleteCard}>Delete</Button>
-                                            </ButtonToolbar>
-                                        </div>
-                                    </Thumbnail>
-                                </div>
+                            <Col key={card.id} xs={12} sm={6} lg={3}>
+                                <Thumbnail className="card-thumb">
+                                    <div className="caption">
+                                        <h3>{card.title}</h3>
+                                        <p className="flex-text text-muted">{card.description}</p>
+                                    </div>
+                                    <div className="overLay">
+                                        <ButtonToolbar>
+                                            <Button bsStyle="success" id={`card${card.id}`}
+                                                    onClick={this.editCard}>Edit</Button>
+                                            <Button bsStyle="success" id={`card${index}`} onClick={this.deleteCard}>Delete</Button>
+                                        </ButtonToolbar>
+                                    </div>
+                                </Thumbnail>
                             </Col> :
                             <FormComponent
                                 onDataSubmit={this.updateCard}
