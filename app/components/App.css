@@ -31,6 +31,11 @@ body {
 
 .card-collection{
     background-color: #ffffff;
+    border-left: 5px solid #449d44;
+    margin-bottom: 25px;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
 }
 
 
@@ -53,19 +58,9 @@ body {
     -ms-transform: translate(-50%, -50%)
 }
 
-.card-collection {
-    -webkit-box-shadow: 0 8px 6px -6px black;
-    -moz-box-shadow: 0 8px 6px -6px black;
-    box-shadow: 0 8px 6px -6px black;
-}
-
 .thumbnail {
     margin-bottom: 0;
     background-color: transparent;
-}
-
-.card-collection {
-    margin-bottom: 25px;
 }
 
 .card-collection:hover {

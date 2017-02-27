@@ -83,7 +83,7 @@ class CardForm extends React.Component {
                                 />
                             </FormGroup>
                             <Button
-                                bsStyle="primary"
+                                bsStyle="success"
                                 bsSize="large"
                                 disabled={!title}
                                 block onClick={this.handleSubmit}
